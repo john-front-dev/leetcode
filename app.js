@@ -21,17 +21,31 @@
 // 1. Two Sum 
 // Dificulty: Easy
 
-var twoSum = function(nums, target) {
-    let num = nums[0]
-    let result = 0
-    for(let j = 0; j<= nums.length; j++) {
-        for(let i = 1; i<= nums.length; i++) {
-        result = num + nums[i]
-        console.log([nums.indexOf(num), i]);
-        if(result === target) return [nums.indexOf(num), i]
-        }
-        num = nums[j]
-    }
+// var twoSum = function(nums, target) {
+//     let num = nums[0]
+//     let result = 0
+//     for(let j = 0; j<= nums.length; j++) {
+//         for(let i = 1; i<= nums.length; i++) {
+//         result = num + nums[i]
+//         console.log([nums.indexOf(num), i]);
+//         if(result === target) return [nums.indexOf(num), i]
+//         }
+//         num = nums[j]
+//     }
+// };
+
+// twoSum([2,5,5,11], 10)
+
+// 9. Palindrome Number
+// Dificulty: Easy
+
+var isPalindrome = function(x) {
+    const str = String(x)
+
+    if  (str.length <= 1) return true
+    if (str[0] !== str[str.length - 1]) return false
+
+    return isPalindrome(str.slice(1, -1))
 };
 
-twoSum([2,5,5,11], 10)
+console.log(isPalindrome(1234567654321))
