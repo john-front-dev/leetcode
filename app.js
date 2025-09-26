@@ -39,13 +39,34 @@
 // 9. Palindrome Number
 // Dificulty: Easy
 
-var isPalindrome = function(x) {
-    const str = String(x)
+// var isPalindrome = function(x) {
+//     const str = String(x)
 
-    if  (str.length <= 1) return true
-    if (str[0] !== str[str.length - 1]) return false
+//     if  (str.length <= 1) return true
+//     if (str[0] !== str[str.length - 1]) return false
 
-    return isPalindrome(str.slice(1, -1))
-};
+//     return isPalindrome(str.slice(1, -1))
+// };
 
-console.log(isPalindrome(1234567654321))
+// console.log(isPalindrome(1234567654321))
+
+
+
+
+// 83. Remove Duplicates from Sorted List
+
+// var deleteDuplicates = function(head) {
+//   let current = head;
+
+//   while (current && current.next) {
+//       if (current.val === current.next.val) {
+//           current.next = current.next.next;
+//       } else {
+//           current = current.next;
+//       }
+//   }
+
+//   return head;
+// }
+
+// deleteDuplicates(testCase)
