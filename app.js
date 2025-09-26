@@ -39,16 +39,18 @@
 // 9. Palindrome Number
 // Dificulty: Easy
 
-// var isPalindrome = function(x) {
-//     const str = String(x)
+var isPalindrome = function(x) {
+    // const str = String(x)
 
-//     if  (str.length <= 1) return true
-//     if (str[0] !== str[str.length - 1]) return false
+    // if  (str.length <= 1) return true
+    // if (str[0] !== str[str.length - 1]) return false
 
-//     return isPalindrome(str.slice(1, -1))
-// };
+    // return isPalindrome(str.slice(1, -1))
 
-// console.log(isPalindrome(1234567654321))
+    // return x.toString() === x.toString().split("").reverse().join("");
+};
+
+console.log(isPalindrome(121))
 
 
 
@@ -92,9 +94,9 @@
 // 66. Plus One
 // Dificulty: Easy
 
-var plusOne = function(digits) {
-  let number = BigInt(digits.join("")) + 1n;
-    return number.toString().split("").map(Number)
-};
+// var plusOne = function(digits) {
+//   let number = BigInt(digits.join("")) + 1n;
+//     return number.toString().split("").map(Number)
+// };
 
-plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
+// plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
