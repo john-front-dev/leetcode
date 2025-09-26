@@ -79,9 +79,22 @@
 // 58. Length of Last Word
 // Dificulty: Easy
 
-var lengthOfLastWord = function(s) {
-  let arr = s.trim().split(" ")
-  return arr[arr.length - 1].length
+// var lengthOfLastWord = function(s) {
+//   let arr = s.trim().split(" ")
+//   return arr[arr.length - 1].length
+// };
+
+// lengthOfLastWord("luffy is still joyboy")
+
+
+
+
+// 66. Plus One
+// Dificulty: Easy
+
+var plusOne = function(digits) {
+  let number = BigInt(digits.join("")) + 1n;
+    return number.toString().split("").map(Number)
 };
 
-lengthOfLastWord("luffy is still joyboy")
+plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
