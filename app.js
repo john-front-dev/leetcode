@@ -39,7 +39,7 @@
 // 9. Palindrome Number
 // Dificulty: Easy
 
-var isPalindrome = function(x) {
+// var isPalindrome = function(x) {
     // const str = String(x)
 
     // if  (str.length <= 1) return true
@@ -48,9 +48,9 @@ var isPalindrome = function(x) {
     // return isPalindrome(str.slice(1, -1))
 
     // return x.toString() === x.toString().split("").reverse().join("");
-};
+// };
 
-console.log(isPalindrome(121))
+// console.log(isPalindrome(121))
 
 
 
@@ -100,3 +100,18 @@ console.log(isPalindrome(121))
 // };
 
 // plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
+
+
+let arr = [1,2,3,0,0,0]
+let m = 3
+let nums2 = [2,5,6]
+let n = 3   
+
+var merge = function(nums1, m, nums2, n) {
+  let arr = nums1.slice(0, m).concat(nums2).sort((a, b) => a - b) 
+  nums1.splice(0, nums1.length, ...arr)
+};
+
+merge(arr, m, nums2, n)
+
+console.log(arr)
