@@ -54,6 +54,7 @@
 
 
 // 83. Remove Duplicates from Sorted List
+// Dificulty: Easy
 
 // var deleteDuplicates = function(head) {
 //   let current = head;
@@ -70,3 +71,17 @@
 // }
 
 // deleteDuplicates(testCase)
+
+
+
+
+
+// 58. Length of Last Word
+// Dificulty: Easy
+
+var lengthOfLastWord = function(s) {
+  let arr = s.trim().split(" ")
+  return arr[arr.length - 1].length
+};
+
+lengthOfLastWord("luffy is still joyboy")
