@@ -102,16 +102,30 @@
 // plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
 
 
-let arr = [1,2,3,0,0,0]
-let m = 3
-let nums2 = [2,5,6]
-let n = 3   
+// 88. Merge Sorted Array
+//  Dificult: Easy
+// let arr = [1,2,3,0,0,0]
+// let m = 3
+// let nums2 = [2,5,6]
+// let n = 3   
 
-var merge = function(nums1, m, nums2, n) {
-  let arr = nums1.slice(0, m).concat(nums2).sort((a, b) => a - b) 
-  nums1.splice(0, nums1.length, ...arr)
-};
+// var merge = function(nums1, m, nums2, n) {
+//   let arr = nums1.slice(0, m).concat(nums2).sort((a, b) => a - b) 
+//   nums1.splice(0, nums1.length, ...arr)
+// };
 
-merge(arr, m, nums2, n)
+// merge(arr, m, nums2, n)
 
-console.log(arr)
+// console.log(arr)
+
+
+
+// 100. Same Tree
+// Dificulty: Easy
+
+// var isSameTree = function(p, q) {
+//     return JSON.stringify(p) === JSON.stringify(q); 
+// };
+
+// console.log(isSameTree([1,2,1], [1,1,2]))
+
