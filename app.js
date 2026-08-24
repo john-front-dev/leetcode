@@ -129,3 +129,54 @@
 
 // console.log(isSameTree([1,2,1], [1,1,2]))
 
+
+
+// 3. Longest Substring Without Repeating Characters
+//  Dificult: Medium
+// var lengthOfLongestSubstring = function(s) {
+//     let result = []
+//     for(i = 0; i <= s.length; i++) {
+//         if(!result.includes(s[i])){
+//             result.push(s[i])
+//         }
+//     }
+//     return result
+// };
+
+// console.log(lengthOfLongestSubstring("abcabcbb"))
+
+
+// 27. Remove Element
+// var removeElement = function(nums, val) {
+//   let k = 0;
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] !== val) {
+//       nums[k] = nums[i];
+//       k++;
+//     }
+//   }
+
+//   return k;
+// };
+
+// console.log(removeElement([3,2,2,3], 3))
+
+
+
+// 2248. Intersection of Multiple Arrays
+//  Dificult: Easy
+var intersection = function(nums) {
+    let result = nums[0]
+    nums.forEach(el => {
+        for (let i = result.length - 1; i >= 0; i--) {
+            if (!el.includes(result[i])) {
+                result.splice(i, 1);
+            }
+        }
+   });
+
+    return result.sort((a,b) => a-b)
+};
+
+console.log(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))
