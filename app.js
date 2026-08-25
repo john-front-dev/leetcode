@@ -166,17 +166,49 @@
 
 // 2248. Intersection of Multiple Arrays
 //  Dificult: Easy
-var intersection = function(nums) {
-    let result = nums[0]
-    nums.forEach(el => {
-        for (let i = result.length - 1; i >= 0; i--) {
-            if (!el.includes(result[i])) {
-                result.splice(i, 1);
-            }
-        }
-   });
+// var intersection = function(nums) {
+//     let result = nums[0]
+//     nums.forEach(el => {
+//         for (let i = result.length - 1; i >= 0; i--) {
+//             if (!el.includes(result[i])) {
+//                 result.splice(i, 1);
+//             }
+//         }
+//    });
 
-    return result.sort((a,b) => a-b)
+//     return result.sort((a,b) => a-b)
+// };
+
+// console.log(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))
+
+
+
+// 26. Remove Duplicates from Sorted Array
+//  Dificult: Easy
+// var removeDuplicates = function(nums) {
+//     let k = 1
+
+//     for (let i = 1; i < nums.length; i++) {
+//         if (nums[i] !== nums[i - 1]) {
+//             nums[k] = nums[i]
+//             k++
+//         }
+//     }
+
+//     return k
+// };
+
+// console.log(removeDuplicates([1,1,2]))
+
+
+
+
+// 217. Contains Duplicate
+//  Dificult: Easy
+var containsDuplicate = function(nums) {
+    let result = nums.length === new Set([...nums]).size
+    return !result
 };
 
-console.log(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))
+
+console.log(containsDuplicate([[2,14,18,22]]))
