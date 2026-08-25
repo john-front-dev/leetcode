@@ -110,8 +110,7 @@
 // let n = 3   
 
 // var merge = function(nums1, m, nums2, n) {
-//   let arr = nums1.slice(0, m).concat(nums2).sort((a, b) => a - b) 
-//   nums1.splice(0, nums1.length, ...arr)
+// nums1.splice(0, nums1.length, ...nums1.slice(0, m).concat(nums2).sort((a, b) => a - b))
 // };
 
 // merge(arr, m, nums2, n)
@@ -205,10 +204,33 @@
 
 // 217. Contains Duplicate
 //  Dificult: Easy
-var containsDuplicate = function(nums) {
-    let result = nums.length === new Set([...nums]).size
-    return !result
+// var containsDuplicate = function(nums) {
+//     let result = nums.length === new Set([...nums]).size
+//     return !result
+// };
+
+
+// console.log(containsDuplicate([[2,14,18,22]]))
+
+
+
+// 88. Merge Sorted Array
+//  Dificult: Easy
+
+let arr = [1,2,3,0,0,0]
+let m = 3
+let nums2 = [2,5,6]
+let n = 3  
+var merge = function(nums1, m, nums2, n) {
+   nums1.splice(m, n, ...nums2)
+    for (let i = 0; i < nums1.length; i++) {
+        for (let j = 0; j < nums1.length - 1 - i; j++) {
+            if (nums1[j] > nums1[j + 1]) {
+                [nums1[j], nums1[j + 1]] = [nums1[j + 1], nums1[j]]
+            }
+        }
+    }
 };
 
-
-console.log(containsDuplicate([[2,14,18,22]]))
+merge(arr,m,nums2,n)
+console.log(arr)
